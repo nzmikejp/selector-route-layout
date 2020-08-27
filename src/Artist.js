@@ -24,7 +24,7 @@ class Artist extends Component {
         <p>{description}</p>
         <footer>
           <div className="icons">
-            <Link to={'artists/'+id+'/edit'}><i className="fas fa-edit"></i></Link>
+            <Link to={'/artists/'+id+'/edit'}><i className="fas fa-edit"></i></Link>
             <i onClick={this.handleTrashClick} className="far fa-trash-alt"></i>
           </div>
           <button className={newClassName}>{type_id}</button>

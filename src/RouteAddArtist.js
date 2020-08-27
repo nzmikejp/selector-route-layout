@@ -25,7 +25,7 @@ class RouteAddArtist extends Component {
           <div className="logo">
             <img src="/images/logo.svg" alt="" />
           </div>
-          <Link to={'artists/'}><i className="fas fa-times-circle"></i></Link>
+          <Link to={'/artists'}><i className="fas fa-times-circle"></i></Link>
         </header>
         <main>
         <h1>Add Artist</h1>

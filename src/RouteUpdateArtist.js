@@ -19,6 +19,7 @@ class RouteUpdateArtist extends Component {
     var data = {
       name: formData.get('name-input'),
       description: formData.get('description-input'),
+      photo: formData.get('photo-input'),
       type_id: formData.get('genre-input')
     }
 
@@ -35,7 +36,7 @@ class RouteUpdateArtist extends Component {
   }
 
   render() {
-    var { name, description, type_id } = this.props
+    var { name, description, type_id, photo } = this.state.artist
 
     return (
       <div className="addArtist App">
@@ -54,8 +55,8 @@ class RouteUpdateArtist extends Component {
             <label htmlFor="description-input">Description:</label>
             <input type="text" id="description-input" name="description-input" placeholder="Enter your description" defaultValue={description} />
 
-            <label htmlFor="photo">Photo:</label>
-            <input type="text" id="photo" name="photo" placeholder="Enter your cover photo" />
+            <label htmlFor="photo-input">Photo:</label>
+            <input type="text" id="photo-input" name="photo-input" placeholder="Enter your cover photo" defaultValue={photo}/>
 
             <label htmlFor="genre-input">Genres:</label>
 

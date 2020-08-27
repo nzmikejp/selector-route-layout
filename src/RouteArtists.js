@@ -45,7 +45,7 @@ class RouteArtists extends Component {
                     <div className="logo">
                         <img src="/images/logo.svg" alt="The logo" />
                     </div>
-                    <Link to={'artists/create'}><i className="fas fa-plus-circle"></i></Link>
+                    <Link to={'/artists/create'}><i className="fas fa-plus-circle"></i></Link>
                 </header>
                 <main>
                     {
