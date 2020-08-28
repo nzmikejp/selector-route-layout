@@ -8,22 +8,7 @@ class RouteArtists extends Component {
         super(props)
 
         this.state = {
-            artists: [
-                {
-                    id: 1,
-                    name: "Red Hot Chilli Peppers",
-                    description: " Red Hot Chili Peppers are an American rock band formed in Los Angeles in 1983. Their music incorporates elements of alternative rock, funk, punk rock and psychedelic rock. With over 80 million records sold worldwide, ",
-                    photo: "/images/rhcp-1.jpg",
-                    type_id: 'Rock'
-                },
-                {
-                    id: 2,
-                    name: "The Strokes",
-                    description: " The Strokes are an American rock band from Manhattan, New York. Formed in 1998, the band is often credited with having spearheaded a revival of 1960s-style garage rock in the early 21st century. ",
-                    photo: "/images/the-strokes-1.jpg",
-                    type_id: 'Rock'
-                }
-            ],
+            artists: []
         }
     }
 

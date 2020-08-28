@@ -13,8 +13,9 @@ class Artist extends Component {
 }
 
   render() {
-    var { name, description, photo, type_id, id } = this.props
-    var newClassName = 'genre ' + type_id.replace(/\s+/g, '-').toLowerCase()
+    var { name, description, photo, id, type } = this.props
+
+    var newClassName = 'genre ' + type.name.replace(/\s+/g, '-').toLowerCase()
 
     return (
       <div className="artist">
@@ -27,7 +28,7 @@ class Artist extends Component {
             <Link to={'/artists/'+id+'/edit'}><i className="fas fa-edit"></i></Link>
             <i onClick={this.handleTrashClick} className="far fa-trash-alt"></i>
           </div>
-          <button className={newClassName}>{type_id}</button>
+          <button className={newClassName}>{type.name}</button>
         </footer>
       </div>
     )
