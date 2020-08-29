@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { navigate } from '@reach/router'
-import { Link } from '@reach/router'
+import { navigate, Link } from '@reach/router'
 import API from './API'
 
 class RouteAddArtist extends Component {
@@ -11,6 +10,7 @@ class RouteAddArtist extends Component {
     var data = {
       name: formData.get('name-input'),
       description: formData.get('description-input'),
+      photo: formData.get('photo-input'),
       type_id: formData.get('genre-input')
     }
 
@@ -36,17 +36,17 @@ class RouteAddArtist extends Component {
             <label htmlFor="description-input">Description:</label>
             <input type="text" id="description-input" name="description-input" placeholder="Enter your description" />
 
-            <label htmlFor="photo">Photo:</label>
-            <input type="text" id="photo" name="photo" placeholder="Enter your cover photo" />
+            <label htmlFor="photo-input">Photo:</label>
+            <input type="text" id="photo-input" name="photo-input" placeholder="Enter your cover photo" />
 
             <label htmlFor="genre-input">Genres:</label>
 
             <select name="genre-input" id="genre-input">
-              <option value="rock">Rock</option>
-              <option value="metal">Metal</option>
-              <option value="acid jazz">Acid Jazz</option>
-              <option value="new age">New Age</option>
-              <option value="edm">EDM</option>
+              <option value="1">EDM</option>
+              <option value="2">Rock</option>
+              <option value="3">Metal</option>
+              <option value="4">Acid Jazz</option>
+              <option value="5">New Age</option>
             </select>
 
             <button type="submit">Add</button>

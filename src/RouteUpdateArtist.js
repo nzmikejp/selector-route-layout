@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { navigate } from '@reach/router'
-import { Link } from '@reach/router'
+import { navigate, Link } from '@reach/router'
 import API from './API'
 
 
@@ -61,11 +60,11 @@ class RouteUpdateArtist extends Component {
             <label htmlFor="genre-input">Genres:</label>
 
             <select name="genre-input" id="genre-input" defaultValue={type_id}>
-              <option value="rock">Rock</option>
-              <option value="metal">Metal</option>
-              <option value="acid jazz">Acid Jazz</option>
-              <option value="new age">New Age</option>
-              <option value="edm">EDM</option>
+              <option value="1">EDM</option>
+              <option value="2">Rock</option>
+              <option value="3">Metal</option>
+              <option value="4">Acid Jazz</option>
+              <option value="5">New Age</option>
             </select>
 
             <button type="submit">Update</button>

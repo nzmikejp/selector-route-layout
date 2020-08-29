@@ -14,12 +14,11 @@ class Artist extends Component {
 
   render() {
     var { name, description, photo, id, type } = this.props
-
-    var newClassName = 'genre ' + type.name.replace(/\s+/g, '-').toLowerCase()
+    var photoPrefix = '/images/'+photo+'.jpg'
 
     return (
       <div className="artist">
-        <img src={photo ? photo : filler} alt="The Artist" />
+        <img src={photoPrefix ? photoPrefix : filler} alt="The Artist" />
         <h1>{name}</h1>
         <hr />
         <p>{description}</p>
@@ -28,7 +27,7 @@ class Artist extends Component {
             <Link to={'/artists/'+id+'/edit'}><i className="fas fa-edit"></i></Link>
             <i onClick={this.handleTrashClick} className="far fa-trash-alt"></i>
           </div>
-          <button className={newClassName}>{type.name}</button>
+          <button style={{backgroundColor: type.genreColor}} className="genre">{type.name}</button>
         </footer>
       </div>
     )
